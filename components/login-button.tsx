@@ -53,26 +53,40 @@ const LoginButton = () => {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900 text-center" 
                   >
-                    推し愛い
+                    推し愛い💖にログイン
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500 text-center">
-                      『推し愛い』は、愛する推しのさらなる活躍を応援する
-                      <p></p>
-                      推し活プラットフォーム
-                      <p></p>
-                      さあ、推しの輪を共に広げよう
-                    </p>
-                  </div>
 
-                  <div className="mt-4 text-center">
+                  <div className="flex flex-col mt-7 text-center space-y-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="justify-center rounded-md border border-transparent bg-lime-100 px-4 py-3 text-sm font-medium text-lime-500 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeModal}
+                    >
+                      Login with Line
+                    </button>
+                    <button
+                      type="button"
+                      className="justify-center rounded-md border border-transparent bg-blue-100 px-4 py-3 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeModal}
+                    >
+                      Login with Twitter
+                    </button>
+                    <button
+                      type="button"
+                      className="justify-center rounded-md border border-transparent bg-zinc-200 px-4 py-3 text-sm font-medium text-zinc-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
                       Login with Google
                     </button>
+                  </div>
+                  <div className="mt-2">
+                    <p className="text-sm text-gray-500 text-center">
+                     （OSHIAI）は、愛する推しのさらなる活躍を応援する
+                      <p></p>
+                      『推し活』共有プラットフォーム
+                      <p></p>
+                      さあ、あなたが愛する推しを発見・共有しよう🎩
+                    </p>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
