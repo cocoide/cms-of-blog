@@ -6,13 +6,19 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: true,
       padding: {
-        DEFAULT: '16px',
-        sm: '24px',
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
     },
-    extend: {},
+    extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
+    },
   },
   variants: {
     extend: {
