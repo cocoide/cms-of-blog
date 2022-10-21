@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-row h-14 px-4 space-x-5 justify-center">
       <h2 className="flex">
-      ©Visional
+      ©osicomi
       </h2>
       <h3 className="flex flex-col space-y-1">
         <Link href="/profile">

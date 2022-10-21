@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react"
 import { Dialog, Transition } from '@headlessui/react'
 
+
 const LoginButton = () => {
         let [isOpen, setIsOpen] = useState(false)
 
@@ -18,8 +19,9 @@ const LoginButton = () => {
     <button 
         type="button"
         onClick={openModal}
-        className="px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
+        className="flow md:py-4 md:px-6 px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
         >
+
           ログイン
     </button>
     
@@ -53,7 +55,7 @@ const LoginButton = () => {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900 text-center" 
                   >
-                    推し愛い💖にログイン
+                    『推しコミ』にログイン
                   </Dialog.Title>
 
                   <div className="flex flex-col mt-7 text-center space-y-4">
@@ -81,9 +83,9 @@ const LoginButton = () => {
                   </div>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500 text-center">
-                     （OSHIAI）は、愛する推しのさらなる活躍を応援する
+                     （OSICOMI）は、愛する推しのさらなる活躍にコミットする
                       <p></p>
-                      『推し活』共有プラットフォーム
+                      『推し活』共創プラットフォーム
                       <p></p>
                       さあ、あなたが愛する推しを発見・共有しよう🎩
                     </p>
