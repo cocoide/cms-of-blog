@@ -19,9 +19,8 @@ const LoginButton = () => {
     <button 
         type="button"
         onClick={openModal}
-        className="flow md:py-4 md:px-6 px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
+        className="flow md:py-4 md:px-6 px-4 py-3 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
         >
-
           ログイン
     </button>
     

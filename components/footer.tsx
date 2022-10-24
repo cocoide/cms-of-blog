@@ -26,6 +26,9 @@ const Footer = () => {
         </Link>
       </h3>
       <h3 className="flex flex-col space-y-1">
+        <Link href="/question">
+        <a className="">質問箱</a>
+        </Link>
         <Link href="/setting">
         <a className="">設定</a>
         </Link>

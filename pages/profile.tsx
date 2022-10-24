@@ -6,7 +6,6 @@ const profile = () => {
     <Head>
         <title>PROFILE</title>
         <meta name="description" content="profile" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
     <h2 className="text-center md:text-3xl text-lg"
     >PROFILE</h2>
