@@ -1,3 +1,4 @@
+import LoginIcon from "public/image/login-icon.svg"
 import { Fragment, useState } from "react"
 import { Dialog, Transition } from '@headlessui/react'
 
