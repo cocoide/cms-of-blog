@@ -10,10 +10,10 @@ const FooterNavi = () => {
     inset-x-0 botton-0">
         
         <div className="gap-10 flex flex-row justify-center pt-3">
-          <InboxIcon width={40} height={40} color={"white"}/>
-          <UserIcon width={40} height={40} color={"white"}/>
-          <ChatIcon width={40} height={40} color={"white"}/>
-          <PrezentIcon width={40} height={40} color={"white"}/>
+          <InboxIcon width={40} height={40} />
+          <UserIcon width={40} height={40} />
+          <ChatIcon width={40} height={40} />
+          <PrezentIcon width={40} height={40} />
           
         </div>
         

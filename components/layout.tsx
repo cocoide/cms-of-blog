@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import Footer from "../normal-parts/footer";
-import Header from "../normal-parts/header";
-import FooterNavi from "../normal-parts/footer-navi";
+import Footer from "./footer";
+import Header from "./header";
+import FooterNavi from "./footer-navi";
 type Props = { children: ReactNode }
 
 const Layout = ({ children }: Props) => {

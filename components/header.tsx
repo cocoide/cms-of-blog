@@ -1,6 +1,6 @@
 import Link from "next/link";
-import LoginButton from "../login-button";
-import MenueButton from "../menu-button";
+import LoginButton from "./login-button";
+import MenueButton from "./menu-button";
 
 
 const Header = () => {
