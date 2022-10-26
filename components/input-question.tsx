@@ -2,9 +2,11 @@ const InputQuestion = () => {
   
   return (
     
-    <div className="p-5 md:p-10 md:w-3/5 drop-shadow-md text-center">
+    <div className="p-5 md:p-10 md:w-1/7 drop-shadow-md text-center"
+    >
       <div className="bg-sky-300
-       rounded-lg aspect-video px-14 md:px-16">
+       rounded-lg aspect-video px-14 md:px-16"
+       >
       <h2 className="text-white md:text-2xl text-lg p-5 text-left">
         質問箱
       </h2>

@@ -1,4 +1,4 @@
-const MenueButton= () => {
+const MenuButton= () => {
   return (
     <div className="pr-5">
 <button 
@@ -9,4 +9,4 @@ const MenueButton= () => {
     </div>
   )
 }
-export default MenueButton
+export default MenuButton

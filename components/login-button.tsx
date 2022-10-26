@@ -20,7 +20,7 @@ const LoginButton = () => {
     <button 
         type="button"
         onClick={openModal}
-        className="md:py-4 md:px-5 px-3 py-3 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
+        className="mt-3 md:py-4 md:px-5 px-3 py-3 rounded-md bg-indigo-400 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
         >
           <div className="flex flex-row items-center gap-1">
             
