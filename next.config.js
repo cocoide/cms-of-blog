@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   // import Image
   images: {
-    domains: ['i.ibb.co'],
+    domains: [],
 }
 }
 module.exports = nextConfig
