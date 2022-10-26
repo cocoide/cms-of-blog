@@ -18,8 +18,8 @@ const Footer = () => {
         </Link>
       </h3>
       <h3 className="flex flex-col space-y-1">
-        <Link href="/ranking">
-        <a className="">ランキング</a>
+        <Link href="/infuluencer">
+        <a className="">インフルエンサー</a>
         </Link>
         <Link href="/setting">
         <a className="token">トークン</a>

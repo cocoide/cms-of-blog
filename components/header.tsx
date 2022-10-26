@@ -1,11 +1,10 @@
 import Link from "next/link";
 import LoginButton from "./login-button";
-import MenueButton from "./menu-button";
 
 
 const Header = () => {
   return (
-    <header className="pt-5 first-letter:border-b flex items-center h-14 px-4">
+    <header className="pt-5 first-letter:border-b flex items-center h-14 px-4 bg-white">
       <h1>
         <Link href="/">
           <a className="text-2xl md:text-3xl">推しコミ</a>
