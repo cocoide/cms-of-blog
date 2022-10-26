@@ -1,4 +1,4 @@
-import LoginIcon from "public/image/login-icon.svg"
+import LoginIcon from "public/icon/login-icon.svg"
 import { Fragment, useState } from "react"
 import { Dialog, Transition } from '@headlessui/react'
 
@@ -20,9 +20,17 @@ const LoginButton = () => {
     <button 
         type="button"
         onClick={openModal}
-        className="flow md:py-4 md:px-6 px-4 py-3 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
+        className="md:py-4 md:px-5 px-3 py-3 rounded-md bg-blue-500 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
         >
-          ログイン
+          <div className="flex flex-row items-center gap-1">
+            
+          <LoginIcon
+          height={20}
+          width={20}
+          />
+          <h3>ログイン</h3>
+          
+          </div>
     </button>
     
     <Transition appear show={isOpen} as={Fragment}>
