@@ -7,9 +7,9 @@ const FooterNavi = () => {
   return (
     <>
     <div className="md:hidden
-    h-16  drop-shadow-xl bg-white
+    h-16 bg-white
     inset-x-0 botton-0
-    border-2
+    border-t-2
     rounded-sm">
         
         <div className="gap-10 flex flex-row justify-center pt-3">
