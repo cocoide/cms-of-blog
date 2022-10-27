@@ -15,7 +15,7 @@ const Layout = ({ children }: Props) => {
     </div>
     
     <div className="flex flex-col md:flex-row 
-    z-10"
+    z-10  h-screen" 
     >
       
       <main className="w-auto md:w-3/5" >{children}</main>
@@ -23,10 +23,10 @@ const Layout = ({ children }: Props) => {
       <aside className="w-auto md:w-2/5
       ">
         <Ranking/></aside>
-    </div>
     
-      <Footer/>
       
+      </div>
+      <Footer/>
       <div className="sticky bottom-0"
       ><FooterNavi/>
          </div>
