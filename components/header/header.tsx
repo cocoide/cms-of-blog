@@ -15,7 +15,7 @@ const Header = () => {
     "
     >
       <h1>
-        <Link href="/">
+        <Link href="/profile">
           <a className="text-2xl md:text-3xl">推しコミ</a>
         </Link>
       </h1>
