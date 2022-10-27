@@ -11,6 +11,7 @@ const Layout = ({ children }: Props) => {
     <Header/>
       <main className="h-screen" >{children}</main>
 
+      <Footer/>
       <div className="sticky bottom-0"
       ><FooterNavi/>
          </div>
