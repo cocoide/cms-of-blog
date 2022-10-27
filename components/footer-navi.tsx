@@ -6,14 +6,17 @@ const FooterNavi = () => {
   return (
     <>
     <div className="md:hidden
-    h-16  shadow-xl bg-indigo-300
-    inset-x-0 botton-0">
+    h-16  shadow-xl bg-white
+    inset-x-0 botton-0
+    border-2
+    rounded-sm">
         
         <div className="gap-10 flex flex-row justify-center pt-3">
-          <InboxIcon width={40} height={40} color={"white"}/>
-          <UserIcon width={40} height={40} color={"white"}/>
-          <ChatIcon width={40} height={40} color={"white"}/>
-          <PrezentIcon width={40} height={40} color={"white"}/>
+          <InboxIcon width={40} height={40} color={"#7B68EE"}
+          className="hover:fill-indigo-200"/>
+          <UserIcon width={40} height={40} color={"#7B68EE"}/>
+          <ChatIcon width={40} height={40} color={"#7B68EE"}/>
+          <PrezentIcon width={40} height={40} color={"#7B68EE"}/>
           
         </div>
         
