@@ -8,7 +8,7 @@ import Link from "next/link"
 const FooterNavi = () => {
   return (
     <>
-    <div className="md:hidden
+    <div className="lg:hidden
     h-14 bg-white
     inset-x-0 botton-0
     border-t-2
@@ -28,7 +28,7 @@ const FooterNavi = () => {
             </button>
             
             <button>
-              <Link href={"/community"}>
+              <Link href={"/question"}>
           <ChatIcon className="h-8 w-8 text-indigo-400"/>
               </Link>
               </button>

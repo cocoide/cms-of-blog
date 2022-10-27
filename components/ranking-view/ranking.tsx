@@ -1,4 +1,5 @@
-import RankingCard from "./ranking-card"
+import NormalUser from "./normal-user"
+import RankedUser from "./ranked-user"
 
 const Ranking = () => {
   return (
@@ -14,9 +15,13 @@ const Ranking = () => {
         bg-indigo-300
         rounded-t-xl"
         >今週の『推し』ランキング</h2>
-        <RankingCard/>
-        <div>1</div>
-        <div>1</div>
+        
+        <RankedUser/>
+        <RankedUser/>
+        <RankedUser/>
+        <NormalUser/>
+        <NormalUser/>
+        <NormalUser/>
         
         
     </div>

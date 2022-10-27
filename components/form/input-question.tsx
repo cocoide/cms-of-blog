@@ -2,18 +2,19 @@ const InputQuestion = () => {
   
   return (
     
-    <div className="p-5 md:p-10 md:w-1/7 drop-shadow-md text-center"
+    <div className="p-5 md:p-12 drop-shadow-md text-center"
     >
-      <div className="bg-sky-300
-       rounded-lg aspect-video px-14 md:px-16"
+      <div className="bg-indigo-200
+       rounded-xl aspect-video px-14 md:px-16"
        >
       <h2 className="text-white md:text-2xl text-lg p-5 text-left">
         質問箱
       </h2>
       <textarea 
-      
-      className="rounded-lg aspect-video w-full p-5">
+      className="aspect-video w-full p-5 bg-indigo-50 shadow-inner"
+      >
       </textarea>
+      
       <input placeholder="1000円" 
       className="bg-transparent p-1 text-center m-5 w-2/5 text-white"
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
