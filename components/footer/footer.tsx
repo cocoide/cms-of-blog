@@ -2,7 +2,9 @@ import Link from "next/link"
 
 const Footer = () => {
   return (
-    <footer className="flex flex-row h-14 px-4 space-x-5 justify-center">
+    <footer className="flex flex-row
+    
+    h-14 px-4 space-x-5 justify-center">
       <h2 className="flex">
       ©osicomi
       </h2>
@@ -18,11 +20,11 @@ const Footer = () => {
         </Link>
       </h3>
       <h3 className="flex flex-col space-y-1">
-        <Link href="/infuluencer">
-        <a className="">インフルエンサー</a>
+        <Link href="/box">
+        <a className="">受信箱</a>
         </Link>
         <Link href="/setting">
-        <a className="token">トークン</a>
+        <a className="commit">コミット</a>
         </Link>
       </h3>
       <h3 className="flex flex-col space-y-1">

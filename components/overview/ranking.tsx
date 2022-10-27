@@ -4,7 +4,8 @@ const Ranking = () => {
     drop-shadow
     divide-y divide-slate-100
     m-10
-    border-collapse
+    border-1
+    shadow-sm
     bg-white"
     >
         <div className="h-10">1</div>

@@ -6,7 +6,7 @@ import LoginButton from "../button/login-button";
 const Header = () => {
   return (
     <header className="
-    m-2 md:p-8 
+    p-2 md:p-10
     flex flex-row 
     items-center
     

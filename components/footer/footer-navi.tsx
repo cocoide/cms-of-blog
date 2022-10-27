@@ -13,12 +13,30 @@ const FooterNavi = () => {
     rounded-sm">
         
         <div className="gap-10 flex flex-row justify-center pt-3">
-          <InboxIcon width={40} height={40} color={"#7B68EE"}>
-            <Link href="/profile"/>
-          </InboxIcon>
+          <button>
+            <Link href={"/box"}>
+          <InboxIcon width={40} height={40} color={"#7B68EE"}/>
+            </Link>
+          </button>
+          
+          <button>
+            <Link href={"/profile"}>
           <UserIcon width={40} height={40} color={"#7B68EE"}/>
+            </Link>
+            </button>
+            
+            <button>
+              <Link href={"/community"}>
           <ChatIcon width={40} height={40} color={"#7B68EE"}/>
+              </Link>
+              </button>
+          
+          
+          <button>
+            <Link href={"/commit"}>
           <PrezentIcon width={40} height={40} color={"#7B68EE"}/>
+            </Link>
+            </button>
           
         </div>
         

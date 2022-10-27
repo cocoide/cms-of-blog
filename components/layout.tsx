@@ -9,17 +9,19 @@ const Layout = ({ children }: Props) => {
   return (
 
  <>
-    <div className="z-50 sticky top-0">
+    <div className="sticky top-0
+    z-50">
     <Header/>
     </div>
     
-    <div className="flex flex-row z-10"
+    <div className="flex flex-col md:flex-row 
+    z-10"
     >
       
-      <main className="w-auto md:w-3/5 h-screen" >{children}</main>
-      {/* ランキング表をレスポンシブで表示を分ける */}
+      <main className="w-auto md:w-3/5" >{children}</main>
+      {/* ランキング表のレスポンシブ対応*/}
       <aside className="w-auto md:w-2/5
-      hidden md:inline-block">
+      ">
         <Ranking/></aside>
     </div>
     
