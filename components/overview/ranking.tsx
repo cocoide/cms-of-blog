@@ -1,3 +1,5 @@
+import RankingCard from "./ranking-card"
+
 const Ranking = () => {
   return (
     <div className="rounded-lg 
@@ -8,8 +10,11 @@ const Ranking = () => {
     shadow-sm
     bg-white"
     >
-        <div className="h-10">1</div>
-        <div>1</div>
+        <h2 className="h-10 p-2 text-center text-white
+        bg-indigo-300
+        rounded-t-xl"
+        >今週の『推し』ランキング</h2>
+        <RankingCard/>
         <div>1</div>
         <div>1</div>
         
