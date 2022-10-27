@@ -26,7 +26,7 @@ const Layout = ({ children }: Props) => {
     
       
       </div>
-      <div className="fixed bottom-0 inset-x-0"
+      <div className="sticky bottom-0 inset-x-0"
         //  {/* FooterNaviはモバイルだけで表示 */}
       ><FooterNavi/>
          </div>
