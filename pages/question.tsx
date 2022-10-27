@@ -1,4 +1,4 @@
-import InputQuestion from "../components/input-question"
+import InputQuestion from "../components/form/input-question"
 
 const question = () => {
   return (

@@ -1,8 +1,10 @@
 import UpdatingIcon from "public/icon/update-icon.svg"
+import DowonMenu from "../components/button/down-menu"
+import TabVar from "../components/button/tab-var"
 const infuluencer = () => {
   return (
 <>
-<div className="m-4">
+<div className="m-4 p-1 flex flex-col justify-center">
   <button type="button" className="group inline-flex items-center gap-2 rounded-full bg-gray-700 px-4 py-1.5 font-semibold text-white hover:bg-gray-900">
     Download
     <svg className="stroke-gray-50 stroke-2" xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
@@ -24,6 +26,7 @@ const infuluencer = () => {
   </button>
 </div>
 
+<TabVar/>
 </>
   )
 }
