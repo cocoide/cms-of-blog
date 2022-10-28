@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-import { createContext, ReactNode, useEffect, useState } from "react";
-import { auth, db } from "../firebase/firebase";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { auth, db } from "../firebase/client";
 import { User } from "../types/user";
 
 
@@ -56,3 +56,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   // プロバイダーを作成し、配布物を格納する
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 };
+
+// コンテクストを受け取るメソッドを定義
+export const useAuth = () => useContext(AuthContext);

@@ -20,7 +20,7 @@ const FooterNavi = () => {
           <InboxIcon className="h-8 w-8 text-indigo-400"/>
             </Link>
           </button>
-          
+      
           <button>
             <Link href={"/profile"}>
           <UserIcon className="h-8 w-8 text-indigo-400"/>

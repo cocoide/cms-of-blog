@@ -1,9 +1,14 @@
 import LoginIcon from "public/icon/login-icon.svg"
-import { Fragment, useState } from "react"
 import { Dialog, Transition } from '@headlessui/react'
 
+import { ButtonHTMLAttributes, Fragment, ReactNode, useState } from "react"
+import { login } from "../../lib/auth";
 
-const LoginButton = () => {
+type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode;
+};
+
+const LoginButton = ({ children, ...props }: Props) => {
         let [isOpen, setIsOpen] = useState(false)
 
         function closeModal() {
@@ -20,7 +25,9 @@ const LoginButton = () => {
     <button 
         type="button"
         onClick={openModal}
-        className="mt-3 md:py-4 md:px-5 px-3 py-3 rounded-md bg-indigo-400 hover:bg-blue-800  text-white disabled:cursor-default disabled:opacity-50"
+        className="mt-3 md:py-4 md:px-5 px-3 py-3 rounded-md bg-indigo-400 hover:bg-blue-800  
+        text-white disabled:cursor-default disabled:opacity-50"
+        {...props}
         >
           <div className="flex flex-row items-center gap-1">
             
@@ -34,7 +41,7 @@ const LoginButton = () => {
     </button>
     
     <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-50" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -69,13 +76,6 @@ const LoginButton = () => {
                   <div className="flex flex-col mt-7 text-center space-y-4">
                     <button
                       type="button"
-                      className="justify-center rounded-md border border-transparent bg-lime-100 px-4 py-3 text-sm font-medium text-lime-500 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
-                    >
-                      Login with Line
-                    </button>
-                    <button
-                      type="button"
                       className="justify-center rounded-md border border-transparent bg-blue-100 px-4 py-3 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
@@ -84,7 +84,7 @@ const LoginButton = () => {
                     <button
                       type="button"
                       className="justify-center rounded-md border border-transparent bg-zinc-200 px-4 py-3 text-sm font-medium text-zinc-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
+                      onClick={login}
                     >
                       Login with Google
                     </button>
