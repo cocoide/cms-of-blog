@@ -5,6 +5,7 @@ import UserIcon from "public/icon/user-icon.svg"
 import LogoutIcon from "public/icon/log-out.svg"
 import GoodIcon from "public/icon/good-icon.svg"
 import SettingIcon from "public/icon/setting-icon.svg"
+import { logout } from '../../lib/auth'
 
 
 export default function DownMenu() {
@@ -140,6 +141,7 @@ export default function DownMenu() {
                     className={`${
                       active ? 'bg-indigo-400 text-white' : 'text-indigo-400'
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    onClick={logout}
                   >
                     {active ? (
                       <LogoutIcon
