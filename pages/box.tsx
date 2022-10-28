@@ -1,5 +1,3 @@
-import UpdatingIcon from "public/icon/update-icon.svg"
-import DowonMenu from "../components/button/down-menu"
 import TabVar from "../components/button/tab-var"
 const infuluencer = () => {
   return (

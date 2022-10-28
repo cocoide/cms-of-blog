@@ -1,4 +1,6 @@
 import { getApp, getApps, initializeApp } from 'firebase/app'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBI4t8AwWo2o5FaGSF8McOdsGqfyG-EsIs",
@@ -12,4 +14,9 @@ const firebaseConfig = {
   export const app = initializeApp(firebaseConfig);
   export const initializeFirebaseApp = () =>
   !getApps().length ? initializeApp(firebaseConfig) : getApp()
-
+  
+  export const provider = new GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  
+export const db = getFirestore();
+export const auth = getAuth();
