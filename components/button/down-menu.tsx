@@ -1,167 +1,126 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, SVGProps, useEffect, useRef, useState } from 'react'
+import { Fragment, ReactNode, SVGProps, useEffect, useRef, useState } from 'react'
 import EditIcon from "public/icon/edit-icon.svg"
 import UserIcon from "public/icon/user-icon.svg"
 import LogoutIcon from "public/icon/log-out.svg"
 import GoodIcon from "public/icon/good-icon.svg"
 import SettingIcon from "public/icon/setting-icon.svg"
 import { logout } from '../../lib/auth'
+import Avatar from '../profile/avater'
+import { useAuth } from '../../context/auth'
+import { classNames } from '../../lib/class-names'
+import MenuLink from '../profile/menu-link'
+
+const Links = [
+{
+  label: '編集',
+  icon:  <EditIcon/>,
+  path: '/edit-profile',
+},
+{
+  label: '『推しリスト』を表示』',
+  icon:  <UserIcon/>,
+  path: '/box/#follow',
+},
+{
+  label: 'いいねした回答',
+  icon:  <GoodIcon/>,
+  path: '/box/#good',
+},
+{
+  label: '設定・課金',
+  icon:  <SettingIcon/>,
+  path: '/setting',
+},
+];
 
 
-export default function DownMenu() {
+const ListItem = ({
+  active,
+  icon,
+  label,
+}: {
+  active: boolean;
+  icon: ReactNode;
+  label: string;
+}) => {
   return (
-    <div className="top-16 w-56 text-right">
-      <Menu as="div" className="relative inline-block text-left">
-        <div>
-          <Menu.Button className="
-          rounded-full
-          aspect-square w-14
-          bg-indigo-300
-          hover:bg-opacity-70
-           text-white  focus:outline-none focus-visible:ring-2
-           focus-visible:ring-white focus-visible:ring-opacity-75">
+    <span
+      className={classNames(
+        'flex items-center space-x-2 p-2 rounded text-sm text-left',
+        active && 'text-white bg-indigo-300'
+      )}
+    >
+      <span
+        className={classNames(
+          'w-5 h-5',
+          active ? 'text-white' : 'text-indigo-300'
+        )}
+      >
+        {icon}
+      </span>
+      <span className="flex-1">{label}</span>
+    </span>
+  );
+};
 
-          </Menu.Button>
-        </div>
-        
-        {/* 『アイコン・メニュー』を開くときの
-        アニメーションを操作 */}
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-100"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          
-          <Menu.Items className="absolute right-0
-          mt-2 w-56 origin-top-right divide-y
-           divide-gray-100 rounded-md bg-white
-           drop-shadow-xl
-           ring-1
-            ring-black ring-opacity-5 focus:outline-none">
-            <div className="px-1 py-1 ">
-              <Menu.Item>
+const DownMenu = () => {
+  const user = useAuth();
+
+  if (!user) {
+    return null;
+  }
+
+  return (
+    <Menu as="div" className="relative">
+      <Menu.Button className="block">
+      <div className="w-12 h-12 bg-indigo-300 rounded-full"></div>
+      {/* Fix avater error later */}
+      
+      </Menu.Button>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="p-1 border-b">
+            {Links.map((link) => (
+              <Menu.Item key={link.path}>
                 {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-indigo-400 text-white' : 'text-indigo-400'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <EditIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <EditIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    編集
-                  </button>
+                  <MenuLink href={link.path}>
+                    <ListItem
+                      icon={link.icon}
+                      label={link.label}
+                      active={active}
+                    />
+                  </MenuLink>
                 )}
               </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-indigo-400 text-white' : 'text-indigo-400'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <UserIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <UserIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    『推しリスト』を表示
-                  </button>
-                )}
-              </Menu.Item>
-            </div>
-            <div className="px-1 py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-indigo-400 text-white' : 'text-indigo-400'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <GoodIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <GoodIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    いいねした回答
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-indigo-400 text-white' : 'text-indigo-400'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    {active ? (
-                      <SettingIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <SettingIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    設定・課金
-                  </button>
-                )}
-              </Menu.Item>
-            </div>
-            <div className="px-1 py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-indigo-400 text-white' : 'text-indigo-400'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                    onClick={logout}
-                  >
-                    {active ? (
-                      <LogoutIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <LogoutIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
-                    ログアウト
-                  </button>
-                )}
-              </Menu.Item>
-            </div>
-          </Menu.Items>
-        </Transition>
-      </Menu>
-    </div>
-  )
-}
+            ))}
+          </div>
+          <div className="p-1">
+            <Menu.Item>
+              {({ active }) => (
+                <button className="w-full" onClick={logout}>
+                  <ListItem
+                    icon={<LogoutIcon />}
+                    label="ログアウト"
+                    active={active}
+                  />
+                </button>
+              )}
+            </Menu.Item>
+          </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+  );
+};
+
+export default DownMenu;
+
