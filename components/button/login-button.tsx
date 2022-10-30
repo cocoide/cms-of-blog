@@ -10,7 +10,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const LoginButton = ({ children, ...props }: Props) => {
         let [isOpen, setIsOpen] = useState(false)
-
+        // function toggleModal() { setIsOpen((unko) => !unko) }
         function closeModal() {
             setIsOpen(false)
           }
@@ -25,7 +25,7 @@ const LoginButton = ({ children, ...props }: Props) => {
     <button 
         type="button"
         onClick={openModal}
-        className="mt-3 md:py-4 md:px-5 px-3 py-3 rounded-md bg-indigo-400 hover:bg-blue-800  
+        className=" md:py-4 md:px-5 px-3 py-3 rounded-md bg-indigo-400 hover:bg-blue-800  
         text-white disabled:cursor-default disabled:opacity-50"
         {...props}
         >
@@ -74,6 +74,7 @@ const LoginButton = ({ children, ...props }: Props) => {
                   </Dialog.Title>
 
                   <div className="flex flex-col mt-7 text-center space-y-4">
+
                     <button
                       type="button"
                       className="justify-center rounded-md border border-transparent bg-blue-100 px-4 py-3 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"

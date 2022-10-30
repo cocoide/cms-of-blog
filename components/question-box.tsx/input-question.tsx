@@ -1,3 +1,5 @@
+import SelectTarget from "./select-target";
+
 const InputQuestion = () => {
 
   
@@ -8,8 +10,11 @@ const InputQuestion = () => {
       <div className="bg-indigo-200
        rounded-xl aspect-video px-14 md:px-16"
        >
-      <h2 className="text-white md:text-2xl text-lg p-5 text-left">
-        質問箱
+      <h2 className="text-white md:text-2xl text-lg py-5 text-left
+      flex flex-row items-center">
+        <SelectTarget/>
+        <span className="w-5"></span>
+          君へ
       </h2>
       <textarea 
       className="aspect-video w-full p-5 bg-indigo-50 shadow-inner"

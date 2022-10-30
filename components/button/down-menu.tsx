@@ -48,13 +48,13 @@ const ListItem = ({
     <span
       className={classNames(
         'flex items-center space-x-2 p-2 rounded text-sm text-left',
-        active && 'text-white bg-indigo-300'
+        active && 'text-white bg-indigo-400'
       )}
     >
       <span
         className={classNames(
           'w-5 h-5',
-          active ? 'text-white' : 'text-indigo-300'
+          active ? 'text-white' : 'text-indigo-400'
         )}
       >
         {icon}
@@ -73,8 +73,10 @@ const DownMenu = () => {
 
   return (
     <Menu as="div" className="relative">
-      <Menu.Button className="block">
-      <div className="w-12 h-12 bg-indigo-300 rounded-full"></div>
+      <Menu.Button className="inline-flex w-full justify-center rounded-full bg-indigo-300 
+      bg-opacity-70 px-7 py-7 hover:bg-opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        {/* from block changed */}
+
       {/* Fix avater error later */}
       
       </Menu.Button>
@@ -87,7 +89,8 @@ const DownMenu = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-slate-200 
+        rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  text-indigo-400">
           <div className="p-1 border-b">
             {Links.map((link) => (
               <Menu.Item key={link.path}>

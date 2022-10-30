@@ -28,7 +28,7 @@ const Header = () => {
   
   return (
     <header className="
-    p-5 md:p-10 m-3
+    p-4 md:p-10 m-3
     flex flex-row items-center
     h-16 bg-white
     inset-x-0 botton-0
@@ -40,7 +40,8 @@ const Header = () => {
         </Link>
       </h1>
       <span className='flex-1'/>
-      <span className="flex-1"></span>
+      <BellIcon width={33} height={33} className="flex place-items-center text-indigo-300"/>
+      <span className="p-2"></span>
       {user === null && !waiting && <LoginButton>ログイン</LoginButton>}
       {user && <DownMenu/>}
     </header>

@@ -3,6 +3,7 @@ import PrezentIcon from "public/icon/prezent-icon.svg"
 import ChatIcon from "public/icon/chat-icon.svg"
 import UserIcon from "public/icon/user-icon.svg"
 import CoinIcon from "public/icon/coin-icon.svg"
+import ChartIcon from "public/icon/chart-icon.svg"
 
 import Link from "next/link"
 const FooterNavi = () => {
@@ -35,8 +36,8 @@ const FooterNavi = () => {
           
           
           <button>
-            <Link href={"/commit"}>
-          <CoinIcon className="h-8 w-8 text-indigo-400"/>
+            <Link href={"/chart"}>
+          <ChartIcon className="h-8 w-8 text-indigo-400"/>
             </Link>
             </button>
           

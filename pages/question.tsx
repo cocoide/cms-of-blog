@@ -1,4 +1,4 @@
-import InputQuestion from "../components/form/input-question"
+import InputQuestion from "../components/question-box.tsx/input-question"
 
 const question = () => {
   return (
