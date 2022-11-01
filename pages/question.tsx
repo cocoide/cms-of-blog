@@ -1,13 +1,11 @@
 import InputQuestion from "../components/question-box.tsx/input-question"
+import SendQButton from "../components/question-box.tsx/send-q-button"
 
 const question = () => {
   return (
     <>
-    <div className="">
-    
-
-    </div>
       <InputQuestion/>
+      
     </>
     
     

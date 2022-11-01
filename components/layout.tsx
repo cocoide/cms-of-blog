@@ -3,6 +3,7 @@ import Footer from "./footer/footer";
 import Header from "./header/header";
 import FooterNavi from "./footer/footer-navi";
 import Ranking from "./ranking-view/ranking";
+import SendQButton from "./question-box.tsx/send-q-button";
 type Props = { children: ReactNode }
 
 const Layout = ({ children }: Props) => {
@@ -27,6 +28,7 @@ const Layout = ({ children }: Props) => {
       
       </div>
       <Footer/>
+      
       <div className="sticky bottom-0 inset-x-0"
         //  {/* FooterNaviはモバイルだけで表示 */}
       ><FooterNavi/>

@@ -34,9 +34,6 @@ const SelectTarget = () => {
               className="bg-white w-full border-none py-2 pl-3 pr-10 text-sm leading-5 
               font-semibold text-black focus:ring-0"
 
-            // displayValue={(person) => person.name}
-           
-            
               onChange={(event) => setQuery(event.target.value)}
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
