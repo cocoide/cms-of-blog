@@ -27,6 +27,7 @@ const Layout = ({ children }: Props) => {
     
       
       </div>
+
       <Footer/>
       
       <div className="sticky bottom-0 inset-x-0"

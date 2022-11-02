@@ -7,10 +7,10 @@ function classNames(...classes: string[]) {
 
 export default function TabVar() {
   let [categories] = useState({
-      Favorite: [
+      いいねした回答: [
         {
           id: 1,
-          title: 'Ask Me Anything: 10 answers to your questions about coffee',
+          title: '好きな食べ物は何ですか？',
           date: '2d ago',
           commentCount: 9,
           shareCount: 5,
@@ -23,7 +23,7 @@ export default function TabVar() {
           shareCount: 2,
         },
       ],
-    Recent: [
+    最近見た回答: [
       {
         id: 1,
         title: 'Does drinking coffee make you smarter?',
@@ -39,7 +39,7 @@ export default function TabVar() {
         shareCount: 2,
       },
     ],
-    Popular: [
+    人気の回答: [
       {
         id: 1,
         title: 'Is tech making coffee better or worse?',

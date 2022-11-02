@@ -1,4 +1,5 @@
-import TabVar from "../components/button/tab-var"
+import TabVar from "../components/box/tab-var"
+
 const infuluencer = () => {
   return (
 <>
@@ -24,7 +25,10 @@ const infuluencer = () => {
   </button>
 </div>
 
+
+<div className="flex justify-center">
 <TabVar/>
+</div>
 </>
   )
 }

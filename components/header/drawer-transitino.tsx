@@ -6,7 +6,7 @@ interface Props {
     setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const TwitterDrawerTransition = ({isOpen, setIsOpen, children}: React.PropsWithChildren<Props>) => {
+const DrawerTransition = ({isOpen, setIsOpen, children}: React.PropsWithChildren<Props>) => {
     return (
         <Transition show={isOpen}>
             <Dialog
@@ -41,4 +41,4 @@ const TwitterDrawerTransition = ({isOpen, setIsOpen, children}: React.PropsWithC
     )
 }
 
-export default TwitterDrawerTransition
+export default DrawerTransition
