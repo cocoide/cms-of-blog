@@ -1,15 +1,37 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, ReactNode } from "react"
+import { useRouter } from "next/router";
+import { FC, ReactNode, useEffect, useState } from "react"
 
 type PortpolioCardProps ={
     id: number
     name: string
 }
 
+
+
+
 const PortpolioCard: FC<PortpolioCardProps>= (props) => {
-  return (
+    
+    const router = useRouter();
+    const [id, setId] = useState<number>()
+    
+    useEffect(() => {
+        // idがqueryで利用可能になったら処理される
+        if (router.asPath !== router.route) {
+          setId(Number(router.query.id));
+        }
+      }, [router]);
+      
+      useEffect(() => {
+        if (id) {
+          // ここでidの値を使用してデータをフェッチする 
+        }
+      }, [id]);
+      
+    
+    return (
       <div className="flex flex-col">
         
         <motion.div
@@ -28,6 +50,7 @@ const PortpolioCard: FC<PortpolioCardProps>= (props) => {
     </div>
         </Link>
         <div className="flex justify-center pt-1">{props.name}</div>
+        
         </motion.div>
     </div>
   )
