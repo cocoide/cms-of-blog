@@ -4,12 +4,7 @@ import { motion } from "framer-motion"
 
 const profile = () => {
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ ease: "easeOut", duration: 1 }}
-  >
+    <div>
     <Head>
         <title>PROFILE</title>
         <meta name="description" content="profile" />
@@ -24,7 +19,7 @@ const profile = () => {
       <PortpolioCard key={i} name={"ゆうた"} id={0}/>
       ))}
     </div>
-    </motion.div>
+    </div>
   )
 }
 export default profile
