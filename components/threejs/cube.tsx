@@ -3,7 +3,7 @@ import { FC, useRef } from 'react';
 import { Mesh } from 'three';
 
 export const Cube: FC = () => {
-	const cubeRef = useRef<Mesh>(null);
+	const cubeRef = useRef<Mesh>(null!);
 	useFrame(() => {
 		const cube = cubeRef.current;
 		if (!cube) return;

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import PortpolioCard from "../components/profile/portplio-card"
 
 const profile = () => {
   return (
@@ -7,15 +8,15 @@ const profile = () => {
         <title>PROFILE</title>
         <meta name="description" content="profile" />
       </Head>
-    <h2 className="text-center md:text-3xl text-lg"
-    >PROFILE</h2>
-    <div className="md:gap-20 md:p-20 gap-10 p-10 justify-center grid grid-cols-3">
-        <div className="bg-gray-400 hover:bg-gray-300 shadow-lg hover:shadow-none rounded-lg text-center container aspect-square"></div>
-        <div className="bg-gray-400 shadow-md rounded-lg"></div>
-        <div className="bg-gray-400 shadow-md rounded-lg"></div>
-        <div className="bg-gray-400 shadow-md rounded-lg aspect-square"></div>
-        <div className="bg-gray-400 shadow-md rounded-lg"></div>
-        <div className="bg-gray-400 shadow-md rounded-lg"></div>
+      
+    <h2 className="text-center md:text-2xl text-lg"
+    >MY  推し</h2>
+    
+    <div className="md:gap-19 md:px-20 gap-8 p-10 justify-center
+    grid grid-cols-3">
+      {[...Array(6)].map((_,i) => (
+      <PortpolioCard key={0} name={"ゆうた"}/>
+      ))}
     </div>
     </>
   )
